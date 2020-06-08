@@ -4,7 +4,7 @@ Hi Team!
 
 This is my first attempt at test automation using Cypress and Applitools to visually test an application.
 
-## Installation
+## Installation - Cypress
 
 1. Install Cypress
 Follow these instructions to install Cypress.
@@ -14,26 +14,23 @@ If you want to experiment with running this project in Continuous Integration, y
 
 After forking this project in Github, run these commands:
 
-## clone this repo to a local directory
+## Clone this repo to a local directory
 git clone https://github.com/brittanybstewart/cypress-intro.git
 
 ## cd into the cloned repo
 cd cypress-intro
 
-## install the node_modules
+## Install the node_modules
 npm install
 
-## start the local webserver
+## Start the local webserver
 npm star
 
 3. Add the project to Cypress
 Follow these instructions to add the project to Cypress.
 
-
-## Installation 
-
 Eyes-Cypress
-Applitools Eyes SDK for Cypress.
+## Installation - Applitools Eyes SDK for Cypress
 
 Installation
 Install npm package
@@ -93,9 +90,33 @@ module.exports = {
 }
 See the Advanced configuration section below for more information on using the config file.
 
+
+## Usage
+After completing the configuration (either automatic or manual) and defining the API key, you will be able to use commands from Eyes-Cypress in your cypress tests to take screenshots and use Applitools Eyes to manage them:
+
+Example
+describe('Hello world', () => {
+  it('works', () => {
+    cy.visit('https://applitools.com/helloworld');
+    cy.eyesOpen({
+      appName: 'Hello World!',
+      testName: 'My first JavaScript test!',
+      browser: { width: 800, height: 600 },
+    });
+    cy.eyesCheckWindow('Main Page');
+    cy.get('button').click();
+    cy.eyesCheckWindow('Click!');
+    cy.eyesClose();
+  });
+});
+
+For more information: 
+https://github.com/applitools/eyes.sdk.javascript1/tree/master/packages/eyes-cypress
+
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
 Please make sure to update tests as appropriate.
+
 
 ## License
