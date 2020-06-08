@@ -1,0 +1,17 @@
+{
+  "name": "aftnewautomation",
+  "version": "1.0.0",
+  "description": "Newest AFT  Automation ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cypress": "^4.3.0"
+  },
+  "devDependencies": {
+    "@applitools/eyes-cypress": "^3.9.21"
+  }
+}
