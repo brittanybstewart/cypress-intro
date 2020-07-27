@@ -14,7 +14,7 @@ describe('Verify that a user can login', () => {
           });
 
         cy.get('#email',{timeout:40000}).type('staff@aftdev.org{enter}')
-        cy.get('#password').type('aftdev')
+        cy.get('#password').type('xxxx')
         cy.get('.btn-primary').click()
         cy.get('.home-welcome > .v-expansion-panel > .v-expansion-panel-header > h4')
 
@@ -30,7 +30,7 @@ it('should invalid user cannot login', () => {
       });
 
     cy.get('#email',{timeout:40000}).type('brittany@aftdev.org{enter}')
-    cy.get('#password').type('aftdev')
+    cy.get('#password').type('xxxx')
     cy.get('.btn-primary').click()
     cy.get('strong').should('have.text', 'These credentials do not match our records.')
 
