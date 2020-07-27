@@ -4,7 +4,7 @@ describe('Navigate main menu items for selected affiliate', ()=>{
     beforeEach(()=>{
         cy.visit('https://stage.aftmda.org/login')
         cy.get('#email',{timeout:40000}).type('staff@aftdev.org{enter}')
-        cy.get('#password').type('aftdev')
+        cy.get('#password').type('xxxx')
         cy.get('.btn-primary').click()
    })
    
